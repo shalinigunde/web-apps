@@ -1,0 +1,24 @@
+services:
+  ecomm:
+    image: ecomm-app
+    build: ecomm-app/
+    container_name: ecomm
+    ports:
+      - "81:80"
+    restart: on-failure
+
+  food:
+    image: food-app
+    build: food-app/
+    container_name: food
+    ports:
+      - "91:80"
+    restart: on-failure
+
+  login:
+    image: login-app
+    build: login-app/
+    container_name: login
+    ports:
+      - "100:80"
+    restart: on-failure
