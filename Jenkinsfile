@@ -33,7 +33,7 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                echo "Deploying branch ${env.Dev}..."
+                echo "Deploying branch ${env.QA}..."
             }
         }
         stage ('sucess') {
