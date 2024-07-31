@@ -31,6 +31,11 @@ pipeline {
                 sh 'sudo systemctl restart nginx'
             }
         }
+        stage("Deploy") {
+            steps {
+                echo "Deploying branch ${env.Dev}..."
+            }
+        }
         stage ('sucess') {
             steps{
                 echo 'deployment success'
