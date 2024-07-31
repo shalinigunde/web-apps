@@ -1,6 +1,11 @@
 pipeline { 
     agent any
       stages {
+        stage("Build") {
+            steps {
+                echo "Building branch ${env.QA}..."
+            }
+        }
         stage ('notification') {
             steps{
                 echo 'deployment started'
