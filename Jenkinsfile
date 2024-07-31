@@ -1,10 +1,11 @@
 pipeline {
   agent any
-    stages{
-      stage (build){
-        steps{
-            echo "build is completed"          
+    stages {
+        stage("Build") {
+            steps {
+                echo "Building branch ${env.main}..."
+                echo "build is completed"
+            }
         }
-      }
     }  
 }
