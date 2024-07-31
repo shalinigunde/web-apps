@@ -7,5 +7,10 @@ pipeline {
                 echo "build is completed"
             }
         }
+      stage("Deploy") {
+            steps {
+                echo "Deploying branch ${env.main}..."
+            }
+        }
     }  
 }
